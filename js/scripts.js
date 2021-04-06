@@ -240,7 +240,7 @@
 
             $('form').hide()
             $('.form-row').css({ "display": "flex", "flex-direction": "column", "align-items": "center", "justify-content": "center" });
-            $('#success-message').show();
+            $('#success-message').css("opacity", "1");
             return false;
         })
 
