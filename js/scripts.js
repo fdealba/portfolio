@@ -218,8 +218,30 @@
             }
             ]
             });
-              
-		   
             });
+
+        $('form').on('submit', function(event) {
+            var name = $('#name').val();
+            var email = $('#email').val();
+            var subject = $('#subject').val();
+            var message = $('#message').val();
+
+            $.ajax({
+                  url: "https://docs.google.com/forms/d/1VMBNWTfeAaWxkELUyOW2llm5Agn8YyXL5aExarDPn1k/formResponse?",
+                  data: {
+                      "entry.698442238": name.replace(/\s/g,'|'),
+                      "entry.1035840249": subject,
+                      "emailAddress": email.replace(/\s/g,'|'),
+                      "entry.72193471": message.replace(/\s/g,'|')
+                    },
+                  type: "POST",
+                  dataType: "xml"
+            });
+
+            $('form').hide()
+            $('.form-row').css({ "display": "flex", "flex-direction": "column", "align-items": "center", "justify-content": "center" });
+            $('#success-message').show();
+            return false;
+        })
 
    })(jQuery);

@@ -687,7 +687,7 @@ ul.portfolio li.active {
 
 .statistics-section {
   position: relative;
-  background: url(../images/bg/statistics.jpg);
+  background: url(../images/bg/statistics.png);
   background-size: cover;
   z-index: 1;
 }
@@ -753,6 +753,7 @@ ul.portfolio li.active {
   top: 0px;
   padding: 60px 40px 60px 40px;
   margin-top: 32px;
+  height: 450px;
 }
 
 .services-section .services-detail:hover {
